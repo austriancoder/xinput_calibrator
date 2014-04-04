@@ -535,6 +535,10 @@ bool CalibratorEvdev::output_xorgconfd(const XYinfo new_axys)
     outstr += line;
     sprintf(line, "	Option	\"SwapAxes\"	\"%d\"\n", new_axys.swap_xy);
     outstr += line;
+    sprintf(line, "     Option  \"InvertX\"	\"%d\"\n", new_axys.x.invert);
+    outstr += line;
+    sprintf(line, "     Option  \"InvertY\"	\"%d\"\n", new_axys.y.invert);
+    outstr += line;
     outstr += "EndSection\n";
 
     // console out
